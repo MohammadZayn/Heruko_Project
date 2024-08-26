@@ -1,0 +1,12 @@
+default: user
+
+environments:
+  qa:
+    base_url: "http://automationpractice.com/index.php"
+    browser: "firefox"
+  prod:
+    base_url: "http://flipcart.com"
+    browser: "chrome"
+  user:
+    base_url: "http://youtube.com"
+    browser : "edge"
