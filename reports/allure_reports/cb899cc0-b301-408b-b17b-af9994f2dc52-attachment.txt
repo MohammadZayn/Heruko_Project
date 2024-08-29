@@ -1,3 +1,0 @@
-INFO     utils.logger:logger.py:91 Initializing WebDriver
-WARNING  selenium.webdriver.common.selenium_manager:selenium_manager.py:135 The msedgedriver version (127.0.2651.86) detected in PATH at C:\Users\local_\AppData\Local\Programs\Python\Python311\Scripts\msedgedriver.exe might not be compatible with the detected MicrosoftEdge version (128.0.2739.42); currently, msedgedriver 128.0.2739.42 is recommended for MicrosoftEdge 128.*, so it is advised to delete the driver in PATH and retry
-INFO     utils.logger:logger.py:91 Closing WebDriver

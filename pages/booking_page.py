@@ -1,32 +1,13 @@
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support.select import Select
+from selenium.webdriver.support.ui import Select
 
+class booking:
 
-class BasePage:
     def __init__(self, setup):
         self.comment = None
         self.PDay = None
         self.wel_msg = None
         self.driver = setup
-        self.timeout = 10
-
-    def home(self):
-        self.driver.find_element(By.CSS_SELECTOR, ".fa.fa-bars").click()
-        self.driver.find_element(By.LINK_TEXT, "Home").click()
-        address = self.driver.find_element(By.XPATH, "//body//footer//p[1]").text
-        print(address)
-
-    def logo(self):
-        self.wel_msg = self.driver.find_element(By.CSS_SELECTOR, "div[class='text-vertical-center'] h1").text
-        print('Welcome to the', self.wel_msg)
-
-    def login_cred(self,):
-        self.driver.find_element(By.CSS_SELECTOR, ".fa.fa-bars").click()
-        self.driver.find_element(By.LINK_TEXT, "Login")
-        self.driver.find_element(By.LINK_TEXT, "Make Appointment").click()
-        self.driver.find_element(By.ID, "txt-username").send_keys("John Doe")
-        self.driver.find_element(By.ID, "txt-password").send_keys("ThisIsNotAPassword")
-        self.driver.find_element(By.TAG_NAME, "button").click()
 
     def facility_hongkong(self):
         dropdown = Select(self.driver.find_element(By.TAG_NAME, "select"))
@@ -109,4 +90,3 @@ class BasePage:
         confirmation = self.driver.find_element(By.XPATH, "//p[@class='lead']").text
         assert confirmation == "Please be informed that your appointment has been booked as following:", \
             "Please check your data"
-

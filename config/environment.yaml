@@ -1,11 +1,11 @@
-default: user
+default: prod
 
 environments:
   qa:
     base_url: "http://automationpractice.com/index.php"
     browser: "firefox"
   prod:
-    base_url: "http://flipcart.com"
+    base_url: "https://katalon-demo-cura.herokuapp.com/"
     browser: "chrome"
   user:
     base_url: "http://youtube.com"
