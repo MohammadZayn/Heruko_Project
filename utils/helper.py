@@ -1,15 +1,21 @@
+import os
+
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+
+
+def capture_screenshot(driver, name, folder_name):
+    # Ensure screenshots directory exists
+    if not os.path.exists(folder_name):
+        os.makedirs(folder_name)
+    screenshot_path = f"folder_name/{name}.png"
+    driver.save_screenshot(screenshot_path)
+    return screenshot_path
 
 class base_helpers:
     def __init__(self, driver):
         self.driver = driver
         self.timeout = 10
-        self.base_url = "https://flipcart.com"
-
-    @staticmethod
-    def base_url(self):
-        self.driver.get(self.base_url)
 
     def find_element(self, locator):
         return WebDriverWait(self.driver, self.timeout).until(EC.presence_of_element_located(locator))

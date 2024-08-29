@@ -1,16 +1,7 @@
 import allure
-from selenium import webdriver
 from selenium.webdriver.common.by import By
-import os
+from tests.test_tokyo_appointment import capture_screenshot
 
-# Ensure screenshots directory exists
-if not os.path.exists('screenshots'):
-    os.makedirs('screenshots')
-
-def capture_screenshot(driver, name):
-    screenshot_path = f"screenshots/{name}.png"
-    driver.save_screenshot(screenshot_path)
-    return screenshot_path
 
 class TestHome:
     @allure.title("#Test_Case -4")
@@ -20,7 +11,6 @@ class TestHome:
     @allure.testcase("Integration_Testing_4")
     def test_home(self, setup):
         driver = setup
-
         # Perform some actions
         try:
             driver.find_element(By.CSS_SELECTOR, ".fa.fa-bars").click()
