@@ -2,7 +2,7 @@ import os
 import allure
 from pages.booking_page import booking
 from pages.login_page import Login
-from utils.helper import capture_screenshot, snaps_path
+from utils.helper import capture_screenshot
 
 
 class Test_Automation:
