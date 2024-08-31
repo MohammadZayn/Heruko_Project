@@ -1,6 +1,7 @@
 import allure
 from pages.booking_page import booking
 from pages.login_page import Login
+from utils.helper import capture_screenshot
 
 
 class Test_Appointment_Hongkong:
@@ -23,10 +24,10 @@ class Test_Appointment_Hongkong:
             self.bp.confirmation()
         except Exception as e:
             # Capture screenshot if there's an exception
-            screenshot_path = capture_screenshot(setup, "home_page_error", "screenshots")
+            screenshot_path = capture_screenshot(setup, "home_page_error")
             allure.attach.file(screenshot_path, name="Screenshot", attachment_type=allure.attachment_type.PNG)
             raise e
         # Capture and attach screenshot after certain actions
-        screenshot_path = capture_screenshot(setup, "home_page_success", "screenshots")
+        screenshot_path = capture_screenshot(setup, "HongKong_Appointment")
         allure.attach.file(screenshot_path, name="Screenshot", attachment_type=allure.attachment_type.PNG)
 

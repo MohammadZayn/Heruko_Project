@@ -25,12 +25,12 @@ class Test_Appointment_Seoul:
             self.bp.confirmation()
         except Exception as e:
             # Capture screenshot if there's an exception
-            screenshot_path = capture_screenshot(setup, "home_page_error", "screenshots")
+            screenshot_path = capture_screenshot(setup, "home_page_error")
             allure.attach.file(screenshot_path, name="Screenshot", attachment_type=allure.attachment_type.PNG)
             raise e
 
         # Capture and attach screenshot after certain actions
-        screenshot_path = capture_screenshot(setup, "home_page_success", "screenshots")
+        screenshot_path = capture_screenshot(setup, "Tokyo_Appointment")
         allure.attach.file(screenshot_path, name="Screenshot", attachment_type=allure.attachment_type.PNG)
 
 

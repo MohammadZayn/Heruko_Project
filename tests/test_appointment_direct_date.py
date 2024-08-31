@@ -1,10 +1,8 @@
-from logging import exception
-
+import os
 import allure
-
 from pages.booking_page import booking
 from pages.login_page import Login
-from utils.helper import capture_screenshot
+from utils.helper import capture_screenshot, snaps_path
 
 
 class Test_Automation:
@@ -26,9 +24,15 @@ class Test_Automation:
             self.bp.confirmation()
         except Exception as e:
             # Capture screenshot if there's an exception
-            screenshot_path = capture_screenshot(setup, "home_page_error", "screenshots")
+            screenshot_path = capture_screenshot(setup, name="home_page_error")
             allure.attach.file(screenshot_path, name="Screenshot", attachment_type=allure.attachment_type.PNG)
             raise e
         # Capture and attach screenshot after certain actions
-        screenshot_path = capture_screenshot(setup, "home_page_success", "screenshots")
-        allure.attach.file(screenshot_path, name="Screenshot", attachment_type=allure.attachment_type.PNG)
+        screenshot_path = capture_screenshot(setup, name="home_page_success")
+        print(f"Screenshot Path: {screenshot_path}")
+        if os.path.exists(screenshot_path):
+            print("Screenshot captured successfully.")
+        else:
+            print("Screenshot file not found.")
+        allure.attach.file(screenshot_path, name="Direct_Date_Sucess", attachment_type=allure.attachment_type.PNG)
+

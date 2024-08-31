@@ -24,7 +24,7 @@ class TestHome:
             raise e
 
         # Capture and attach screenshot after certain actions
-        screenshot_path = capture_screenshot(driver, "home_page_success")
+        screenshot_path = capture_screenshot(driver, "Hospital_Address")
         allure.attach.file(screenshot_path, name="Screenshot", attachment_type=allure.attachment_type.PNG)
 
         # Continue with test assertions and steps
