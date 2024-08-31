@@ -1,3 +1,0 @@
-Yes radio button is selected.
-Screenshot Path: C:\Users\local_\PycharmProjects\Web_Automation_Framework\Snaps\home_page_success.png
-Screenshot captured successfully.
