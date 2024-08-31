@@ -1,14 +1,13 @@
-import os
-
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+import os
 
-
-def capture_screenshot(driver, name, folder_name):
-    # Ensure screenshots directory exists
-    if not os.path.exists(folder_name):
-        os.makedirs(folder_name)
-    screenshot_path = f"folder_name/{name}.png"
+def capture_screenshot(driver, name):
+    # Ensure Snaps directory exists
+    screenshot_path = "C:\\Users\\local_\\PycharmProjects\\Web_Automation_Framework\\Snaps"
+    # Define the full path for the screenshot
+    screenshot_path = os.path.join(screenshot_path, f"{name}.png")
+    # Capture the screenshot
     driver.save_screenshot(screenshot_path)
     return screenshot_path
 
