@@ -1,0 +1,2 @@
+INFO     utils.logger:logger.py:91 Initializing WebDriver
+INFO     utils.logger:logger.py:91 Closing WebDriver
