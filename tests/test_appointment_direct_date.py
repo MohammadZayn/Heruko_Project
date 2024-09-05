@@ -35,4 +35,3 @@ class Test_Automation:
         else:
             print("Screenshot file not found.")
         allure.attach.file(screenshot_path, name="Direct_Date_Sucess", attachment_type=allure.attachment_type.PNG)
-
