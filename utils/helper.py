@@ -4,7 +4,7 @@ import os
 
 def capture_screenshot(driver, name):
     # Ensure Snaps directory exists
-    screenshot_path = "C:\\Users\\local_\\PycharmProjects\\Web_Automation_Framework\\Snaps"
+    screenshot_path = r"C:\ProgramData\Jenkins\.jenkins\workspace\Health_Care Project\Snaps"
     # Define the full path for the screenshot
     screenshot_path = os.path.join(screenshot_path, f"{name}.png")
     # Capture the screenshot
