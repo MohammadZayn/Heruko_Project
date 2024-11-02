@@ -13,17 +13,17 @@ class booking:
 
     def facility_hongkong(self):
         dropdown = Select(self.driver.find_element(By.TAG_NAME, "select"))
-        time.sleep(5)
+        time.sleep(10)
         dropdown.select_by_visible_text("Hongkong CURA Healthcare Center")
 
     def facility_tokyo(self):
         dropdown = Select(self.driver.find_element(By.ID, "combo_facility"))
-        time.sleep(3)
+        time.sleep(10)
         dropdown.select_by_visible_text("Tokyo CURA Healthcare Center")
 
     def facility_seoul(self):
         dropdown = Select(self.driver.find_element(By.TAG_NAME, "select"))
-        time.sleep(3)
+        time.sleep(10)
         dropdown.select_by_visible_text("Seoul CURA Healthcare Center")
 
     def readmission(self):
