@@ -3,13 +3,20 @@ from selenium.webdriver.support import expected_conditions as EC
 import os
 
 def capture_screenshot(driver, name):
-    # Ensure Snaps directory exists
-    screenshot_path = r"C:\Users\moham\PycharmProjects\Heruko_Project\Snaps"
-    # Define the full path for the screenshot
-    screenshot_path = os.path.join(screenshot_path, f"{name}.png")
-    # Capture the screenshot
+    # Define the path for the screenshots directory
+    screenshot_dir = 'C:\\Users\\moham\\PycharmProjects\\Heruko_Project\\Snaps'
+    
+    # Create the directory if it does not exist
+    if not os.path.exists(screenshot_dir):
+        os.makedirs(screenshot_dir)
+    
+    # Define the full path to save the screenshot
+    screenshot_path = os.path.join(screenshot_dir, f"{name}.png")
+    
+    # Capture and save the screenshot
     driver.save_screenshot(screenshot_path)
     return screenshot_path
+
 
 class base_helpers:
     def __init__(self, driver):
