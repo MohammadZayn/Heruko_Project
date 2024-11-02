@@ -5,9 +5,6 @@ from utils.helper import capture_screenshot
 
 
 class Test_Appointment_Hongkong:
-    def __init__(self):
-        self.time = None
-
     @allure.title("#Test_Case -3")
     @allure.description("Booking the Seoul country appointment")
     @allure.tag("Integration", "#3", "TestCase")
@@ -25,7 +22,6 @@ class Test_Appointment_Hongkong:
             self.bp.day_picker()
             self.bp.health_issue()
             self.bp.confirmation()
-            self.time.sleep(10)
         except Exception as e:
             # Capture screenshot if there's an exception
             screenshot_path = capture_screenshot(setup, "home_page_error")

@@ -1057,3 +1057,17 @@ For any inquiries or opportunities, feel free to reach out via www.linkedin.com/
 
 
 
+# Run all tests in a directory
+pytest tests/
+
+# Run specific test files
+pytest tests/test_file1.py tests/test_file2.py
+
+# Run tests with specific marker
+pytest -m smoke
+
+# Run tests with names matching keyword
+pytest -k "test_login or test_logout"
+
+# Run tests in parallel with 4 processes
+pytest -n 4

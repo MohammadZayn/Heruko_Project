@@ -24,14 +24,14 @@ class Test_Automation:
             self.bp.confirmation()
         except Exception as e:
             # Capture screenshot if there's an exception
-            screenshot_path = capture_screenshot(setup, name="home_page_error")
+            screenshot_path = capture_screenshot(setup, name="Direct_Date _Error")
             allure.attach.file(screenshot_path, name="Screenshot", attachment_type=allure.attachment_type.PNG)
             raise e
         # Capture and attach screenshot after certain actions
-        screenshot_path = capture_screenshot(setup, name="home_page_success")
+        screenshot_path = capture_screenshot(setup, name="Direct_Date_Success")
         print(f"Screenshot Path: {screenshot_path}")
         if os.path.exists(screenshot_path):
             print("Screenshot captured successfully.")
         else:
             print("Screenshot file not found.")
-        allure.attach.file(screenshot_path, name="Direct_Date_Sucess", attachment_type=allure.attachment_type.PNG)
+        allure.attach.file(screenshot_path, name="Direct_Date_Success", attachment_type=allure.attachment_type.PNG)

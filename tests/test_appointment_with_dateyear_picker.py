@@ -25,7 +25,7 @@ class Test_Automation:
             self.bp.confirmation()
         except Exception as e:
             # Capture screenshot if there's an exception
-            screenshot_path = capture_screenshot(setup, "home_page_error")
+            screenshot_path = capture_screenshot(setup, "Appointment_Fail")
             allure.attach.file(screenshot_path, name="Screenshot", attachment_type=allure.attachment_type.PNG)
             raise e
         # Capture and attach screenshot after certain actions

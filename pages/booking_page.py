@@ -1,3 +1,5 @@
+import time
+
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import Select
 
@@ -11,14 +13,17 @@ class booking:
 
     def facility_hongkong(self):
         dropdown = Select(self.driver.find_element(By.TAG_NAME, "select"))
+        time.sleep(5)
         dropdown.select_by_visible_text("Hongkong CURA Healthcare Center")
 
     def facility_tokyo(self):
         dropdown = Select(self.driver.find_element(By.ID, "combo_facility"))
+        time.sleep(3)
         dropdown.select_by_visible_text("Tokyo CURA Healthcare Center")
 
     def facility_seoul(self):
         dropdown = Select(self.driver.find_element(By.TAG_NAME, "select"))
+        time.sleep(3)
         dropdown.select_by_visible_text("Seoul CURA Healthcare Center")
 
     def readmission(self):
@@ -84,9 +89,11 @@ class booking:
     def health_issue(self):
         self.comment = "I'm attracting to the exquisite things in the world clearly."
         self.driver.find_element(By.ID, "txt_comment").send_keys(self.comment)
+        time.sleep(5)
         self. driver.find_element(By.ID, "btn-book-appointment").click()
 
     def confirmation(self):
+        time.sleep(5)
         confirmation = self.driver.find_element(By.XPATH, "//p[@class='lead']").text
         assert confirmation == "Please be informed that your appointment has been booked as following:", \
             "Please check your data"
