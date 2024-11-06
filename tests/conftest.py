@@ -32,7 +32,9 @@ def setup(config):
     if config['browser'] == 'firefox':
         driver = webdriver.Firefox()
     elif config['browser'] == 'chrome':
-        driver = webdriver.Chrome()
+        options = webdriver.ChromeOptions()
+        options.add_argument("--headless")
+        driver = webdriver.Chrome(options=options)
     elif config['browser'] == "edge":
         driver = webdriver.Edge()
     else:
