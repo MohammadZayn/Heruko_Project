@@ -1016,28 +1016,6 @@ for browser in browsers:
 - Generates detailed reports that can be viewed directly within Jenkins.
 - Supports continuous integration for a smooth development workflow.
 
-### Add Mobile Testing Support Using Appium
-
-**Installation and Setup:**
-1. Install Appium: Follow the [Appium documentation](http://appium.io/docs/en/about-appium/intro/) to set up Appium.
-2. Configure Python with Appium: 
-   - Install Appium-Python-Client:
-     ```bash
-     pip install Appium-Python-Client
-     ```
-   - Set up desired capabilities for Android/iOS in your test script:
-     ```python
-     desired_caps = {
-         'platformName': 'Android',
-         'deviceName': 'emulator-5554',
-         'app': '/path/to/app.apk'
-     }
-     ```
-3. Write and run test cases for mobile applications.
-
-**Benefits:**
-- Ensures cross-platform compatibility for the Heruko Healthcare application.
-- Provides end-to-end testing on real devices and emulators.
 
 ### Implement Visual Regression Testing
 
@@ -1052,8 +1030,6 @@ Contributions are welcome! Please create a pull request with a detailed descript
 
 ### Contact
 For any inquiries or opportunities, feel free to reach out via www.linkedin.com/in/mohammadzayn or email at mohammadshaik776@gmail.com.
-
-
 
 
 
